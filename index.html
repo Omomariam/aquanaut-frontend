@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06151d">
+  <meta name="description" content="AQUANAUT: The Lost City. Dive into Atlantis, recover artifacts, earn XP and climb the explorer ranks.">
+  <title>AQUANAUT: The Lost City</title>
+  <link rel="icon" href="./assets/site-366efdef-1.webp">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to game</a>
+
+  <header class="site-header">
+    <a class="brand route-link" href="#home" aria-label="AQUANAUT home">
+      <img src="./assets/site-366efdef-1.webp" alt="Ancient bronze and teal Atlantean diving helmet emblem with a turquoise light reflected in its dark visor." width="48" height="48">
+      <span><strong>AQUANAUT</strong><small>THE LOST CITY</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#map">Explore</a>
+      <a href="#missions">Missions</a>
+      <a href="#artifacts">Artifacts</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#naut">$NAUT</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="soundToggle" type="button" aria-label="Turn sound on" aria-pressed="false">
+        <span class="sound-off" aria-hidden="true">◒</span><span class="sound-on" aria-hidden="true">◉</span>
+      </button>
+      <button class="wallet-button" id="walletButton" type="button">Demo Mode</button>
+      <a class="enter-button route-link" href="#map">Enter Atlantis</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="demo-strip"><span></span> Demo Mode: progress is saved on this device</div>
+
+  <aside class="mobile-menu" id="mobileMenu" hidden aria-label="Mobile navigation">
+    <div class="mobile-menu-head">
+      <span>Choose your descent</span>
+      <button id="menuClose" type="button" aria-label="Close navigation">Close</button>
+    </div>
+    <nav>
+      <a href="#map">Explore Atlantis <small>01</small></a>
+      <a href="#dive">Treasure Dive <small>02</small></a>
+      <a href="#missions">Missions <small>03</small></a>
+      <a href="#artifacts">Artifacts <small>04</small></a>
+      <a href="#leaderboard">Leaderboard <small>05</small></a>
+      <a href="#profile">Profile <small>06</small></a>
+      <a href="#naut">$NAUT <small>07</small></a>
+      <a href="#how-to-play">How to Play <small>08</small></a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="view home-view is-active" data-route="home" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-art" role="img" aria-label="A lone diver descends through a vast submerged Atlantean city toward a distant golden throne."></div>
+        <div class="water-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hero-copy">
+          <p class="aqua-badge">Built in the depths of Aqua 🌊</p>
+          <h1 id="home-title">The lost city<br>is calling.</h1>
+          <p class="hero-lede">Dive into Atlantis, recover ancient artifacts, earn XP, and prove how deep you can go.</p>
+          <div class="hero-actions">
+            <a class="primary-action route-link" href="#map">Enter Atlantis</a>
+            <a class="secondary-action route-link" href="#dive">Play Treasure Dive</a>
+          </div>
+        </div>
+        <div class="depth-trail" aria-label="Descent from the surface to the abyss">
+          <div><span>Surface</span><strong>0m</strong></div>
+          <b aria-hidden="true"></b>
+          <div><span>Atlantis</span><strong>3,000m</strong></div>
+          <b aria-hidden="true"></b>
+          <div class="unknown"><span>The Abyss</span><strong>???</strong></div>
+        </div>
+      </div>
+
+      <section class="local-stats" aria-labelledby="local-stats-title">
+        <div class="section-intro">
+          <p class="kicker">Expedition log</p>
+          <h2 id="local-stats-title">Your device. Your legend.</h2>
+          <p>These are transparent local game statistics, not blockchain activity.</p>
+        </div>
+        <div class="stat-row">
+          <div><span>Explorer</span><strong>1</strong></div>
+          <div><span>Total dives</span><strong data-stat="dives">0</strong></div>
+          <div><span>Artifacts found</span><strong data-stat="artifacts">0</strong></div>
+          <div><span>Deepest dive</span><strong><span data-stat="depth">0</span>m</strong></div>
+        </div>
+      </section>
+
+      <section class="journey-section">
+        <div class="section-intro">
+          <p class="kicker">Your journey begins below</p>
+          <h2>Every descent leaves a mark.</h2>
+          <p>Earn XP through dives, discoveries and missions. Surface safely to keep what you find.</p>
+        </div>
+        <ol class="rank-path" aria-label="Explorer rank progression">
+          <li class="current"><span>01</span><strong>Drifter</strong><small>0 XP</small></li>
+          <li><span>02</span><strong>Diver</strong><small>400 XP</small></li>
+          <li><span>03</span><strong>Seeker</strong><small>1,200 XP</small></li>
+          <li><span>04</span><strong>Guardian</strong><small>3,000 XP</small></li>
+          <li><span>05</span><strong>Aquanaut</strong><small>6,000 XP</small></li>
+        </ol>
+      </section>
+
+      <section class="regions-preview">
+        <div class="section-intro">
+          <p class="kicker">Explore Atlantis</p>
+          <h2>Five regions. One way down.</h2>
+        </div>
+        <div class="region-stack">
+          <article><div class="region-number">01</div><div><h3>Coral Gate</h3><p>Sunlit ruins where new explorers learn to read the currents.</p></div><strong>0 - 500m</strong></article>
+          <article><div class="region-number">02</div><div><h3>Sunken Temple</h3><p>Collapsed sanctuaries guard keys, shrines and forgotten routes.</p></div><strong>500 - 1,200m</strong></article>
+          <article class="dark-region"><div class="region-number">03</div><div><h3>Whale Trench</h3><p>The city gives way to sheer rock and moving shadows.</p></div><strong>1,200 - 2,000m</strong></article>
+          <article class="dark-region"><div class="region-number">04</div><div><h3>The Abyss</h3><p>Light fails. Oxygen burns. The oldest relics wait below.</p></div><strong>2,000 - 3,000m</strong></article>
+          <article class="locked-region"><div class="region-number">05</div><div><h3>Throne of Atlantis</h3><p>The last chamber remembers every explorer who turned back.</p></div><strong>Prestige</strong></article>
+        </div>
+        <a class="text-link route-link" href="#map">Open the Atlantis map <span>→</span></a>
+      </section>
+
+      <section class="rarity-section">
+        <div class="section-intro">
+          <p class="kicker">What will you find?</p>
+          <h2>Relics change as the light disappears.</h2>
+        </div>
+        <div class="relic-shelf">
+          <article class="relic common"><span class="relic-mark">◈</span><small>Common</small><h3>Coral Coin</h3><p>A trade piece from the upper city.</p></article>
+          <article class="relic rare"><span class="relic-mark">⌖</span><small>Rare</small><h3>Pearl Compass</h3><p>Its needle points toward lost things.</p></article>
+          <article class="relic epic"><span class="relic-mark">◇</span><small>Epic</small><h3>Oracle Pearl</h3><p>Clouds before danger reaches you.</p></article>
+          <article class="relic legendary"><span class="relic-mark">♆</span><small>Legendary</small><h3>Trident Shard</h3><p>Warm despite three thousand years below.</p></article>
+          <article class="relic mythic"><span class="relic-mark">◉</span><small>Mythic</small><h3>Eye of Atlantis</h3><p>The relic appears to be observing you.</p></article>
+        </div>
+      </section>
+
+      <section class="final-call">
+        <p>Atlantis remembers the brave.</p>
+        <h2>How deep will you go?</h2>
+        <a class="primary-action route-link" href="#dive">Start your first dive</a>
+      </section>
+    </section>
+
+    <section class="view page-view map-view" data-route="map" aria-labelledby="map-title">
+      <header class="page-heading">
+        <p class="kicker">Atlantis map</p>
+        <h1 id="map-title">Choose your depth.</h1>
+        <p>The city descends through five distinct regions. Your rank opens the way.</p>
+      </header>
+      <div class="map-layout">
+        <div class="map-line" aria-hidden="true"><span></span></div>
+        <div class="map-regions" id="mapRegions"></div>
+      </div>
+      <a class="primary-action route-link" href="#dive">Enter Treasure Dive</a>
+    </section>
+
+    <section class="view dive-view" data-route="dive" aria-labelledby="dive-title">
+      <div class="dive-entry" id="diveEntry">
+        <div class="dive-entry-copy">
+          <p class="kicker">Flagship expedition</p>
+          <h1 id="dive-title">Treasure Dive</h1>
+          <p>Dive into the ruins. Collect treasure. Surface before your oxygen runs out.</p>
+          <blockquote>The deeper you go, the greater the reward and the greater the risk.</blockquote>
+          <button class="primary-action button-action" id="beginDive" type="button">Begin dive</button>
+        </div>
+        <div class="dive-manifest" aria-label="Current explorer status">
+          <div><span>Current rank</span><strong data-profile="rank">Drifter</strong></div>
+          <div><span>Current XP</span><strong data-profile="xp">0</strong></div>
+          <div><span>Best depth</span><strong><span data-profile="bestDepth">0</span>m</strong></div>
+          <div><span>Current streak</span><strong><span data-profile="streak">0</span> days</strong></div>
+          <div><span>Equipped artifact</span><strong data-profile="equipped">None</strong></div>
+        </div>
+      </div>
+
+      <div class="dive-game" id="diveGame" hidden>
+        <div class="dive-scene" id="diveScene">
+          <div class="light-column" aria-hidden="true"></div>
+          <div class="diver" aria-hidden="true"><span></span></div>
+          <div class="ruin ruin-one" aria-hidden="true"></div>
+          <div class="ruin ruin-two" aria-hidden="true"></div>
+          <div class="game-depth"><span>Depth</span><strong id="gameDepth">0m</strong><small id="zoneName">Coral Gate</small></div>
+        </div>
+        <div class="dive-console">
+          <div class="oxygen-block" id="oxygenBlock">
+            <div><span>Oxygen</span><strong id="oxygenValue">100%</strong></div>
+            <div class="meter"><span id="oxygenBar"></span></div>
+          </div>
+          <div class="dive-loot">
+            <div><span>Unbanked XP</span><strong id="lootXP">0</strong></div>
+            <div><span>Artifacts</span><strong id="lootArtifacts">0</strong></div>
+            <div><span>Encounters</span><strong id="encounterCount">0</strong></div>
+          </div>
+          <div class="expedition-log" id="expeditionLog" aria-live="polite">Your helmet seals. The water closes above you.</div>
+          <div class="dive-actions">
+            <button class="deeper-button" id="diveDeeper" type="button"><span>Dive deeper</span><small id="nextDepthLabel">Descend to 100m</small></button>
+            <button class="surface-button" id="surfaceDive" type="button">Surface with loot</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="encounter-panel" id="encounterPanel" hidden role="dialog" aria-modal="true" aria-labelledby="encounterTitle">
+        <div class="encounter-art" id="encounterSymbol" aria-hidden="true">◈</div>
+        <p class="kicker">Unexpected encounter</p>
+        <h2 id="encounterTitle">Ancient Chest</h2>
+        <p id="encounterText"></p>
+        <div id="encounterActions"></div>
+      </div>
+
+      <div class="dive-result" id="diveResult" hidden aria-live="polite">
+        <p class="kicker" id="resultKicker">Expedition complete</p>
+        <h2 id="resultTitle">Loot secured.</h2>
+        <p id="resultText"></p>
+        <div class="result-haul" id="resultHaul"></div>
+        <div class="result-actions">
+          <button class="primary-action button-action" id="diveAgain" type="button">Dive again</button>
+          <a class="secondary-action route-link" href="#map">Return to Atlantis</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page-view missions-view" data-route="missions" aria-labelledby="missions-title">
+      <header class="page-heading"><p class="kicker">Field orders</p><h1 id="missions-title">Missions</h1><p>Complete expeditions to earn permanent XP. Mission progress is stored locally.</p></header>
+      <div class="mission-list" id="missionList"></div>
+    </section>
+
+    <section class="view page-view vault-view" data-route="artifacts" aria-labelledby="artifacts-title">
+      <header class="page-heading"><p class="kicker">Recovered collection</p><h1 id="artifacts-title">Artifact Vault</h1><p>Equip one relic at a time. Its small expedition bonus applies to successfully surfaced XP.</p></header>
+      <div class="vault-summary"><div><span>Recovered</span><strong id="vaultCount">0</strong></div><div><span>Equipped</span><strong id="vaultEquipped">None</strong></div></div>
+      <div class="artifact-grid" id="artifactGrid"></div>
+    </section>
+
+    <section class="view page-view leaderboard-view" data-route="leaderboard" aria-labelledby="leaderboard-title">
+      <header class="page-heading"><p class="kicker">Practice board</p><h1 id="leaderboard-title">Demo standings</h1><p>Your local score is placed among fictional demo challengers. No live or on-chain rankings are implied.</p></header>
+      <div class="leaderboard-head"><span>Explorer</span><span>Rank</span><span>Best depth</span><span>Score</span></div>
+      <ol class="leaderboard" id="leaderboardList"></ol>
+    </section>
+
+    <section class="view page-view profile-view" data-route="profile" aria-labelledby="profile-title">
+      <div class="profile-identity">
+        <img src="./assets/site-366efdef-1.webp" alt="AQUANAUT Atlantean diving helmet emblem." width="180" height="180">
+        <div><p class="kicker">Explorer profile</p><h1 id="profile-title">Local Aquanaut</h1><p>Your expedition record on this device.</p></div>
+      </div>
+      <div class="rank-progress"><div><span data-profile="rank">Drifter</span><strong><span data-profile="xp">0</span> XP</strong></div><div class="meter"><span id="rankProgressBar"></span></div><small id="rankProgressText">400 XP to Diver</small></div>
+      <div class="profile-ledger">
+        <div><span>Best depth</span><strong><span data-profile="bestDepth">0</span>m</strong></div>
+        <div><span>Dives</span><strong data-stat="dives">0</strong></div>
+        <div><span>Artifacts</span><strong data-stat="artifacts">0</strong></div>
+        <div><span>Streak</span><strong><span data-profile="streak">0</span> days</strong></div>
+      </div>
+      <button class="danger-text-button" id="resetProgress" type="button">Reset local demo progress</button>
+    </section>
+
+    <section class="view page-view token-view" data-route="naut" aria-labelledby="naut-title">
+      <div class="token-intro">
+        <img src="./assets/site-366efdef-1.webp" alt="AQUANAUT helmet token emblem." width="240" height="240">
+        <div><p class="kicker">Community token</p><h1 id="naut-title">$NAUT</h1><p>$NAUT is the planned community memecoin for the AQUANAUT expedition. The game remains playable in Demo Mode without a wallet or token.</p></div>
+      </div>
+      <div class="token-inscription">
+        <div><span>Token address</span><code id="tokenAddress">Not launched yet</code></div>
+        <button id="copyToken" type="button" disabled>Not launched yet</button>
+      </div>
+      <div class="token-notes">
+        <article><h2>Holder rewards mode</h2><p>After a verified launch, eligible rewards are based on indexed balance and holding time. Availability depends on the configured launch and reward rules.</p></article>
+        <article><h2>Game progression</h2><p>XP, ranks and artifacts in this demo are game data stored on your device. They do not represent token balances or blockchain assets.</p></article>
+      </div>
+    </section>
+
+    <section class="view page-view how-view" data-route="how-to-play" aria-labelledby="how-title">
+      <header class="page-heading"><p class="kicker">Expedition manual</p><h1 id="how-title">How to play</h1><p>Treasure Dive is a short risk-versus-reward expedition. A complete run takes less than two minutes.</p></header>
+      <ol class="manual-steps">
+        <li><span>01</span><div><h2>Begin at the surface</h2><p>Every dive starts with 100% oxygen and no unbanked loot.</p></div></li>
+        <li><span>02</span><div><h2>Choose to descend</h2><p>Each checkpoint costs oxygen and adds XP. Deeper regions can reveal rarer artifacts.</p></div></li>
+        <li><span>03</span><div><h2>Read the encounter</h2><p>Chests, shrines, currents and shadows can change the expedition. Some choices are safer than others.</p></div></li>
+        <li><span>04</span><div><h2>Surface in time</h2><p>Successfully surfaced XP and artifacts become permanent local progress. At zero oxygen, current loot is lost.</p></div></li>
+        <li><span>05</span><div><h2>Climb the ranks</h2><p>Complete missions, equip recovered relics and push your best depth toward the Throne of Atlantis.</p></div></li>
+      </ol>
+      <a class="primary-action route-link" href="#dive">Start Treasure Dive</a>
+    </section>
+  </main>
+
+  <dialog class="wallet-dialog" id="walletDialog">
+    <button class="dialog-close" id="walletClose" type="button" aria-label="Close dialog">×</button>
+    <img src="./assets/site-366efdef-1.webp" alt="AQUANAUT helmet emblem." width="96" height="96">
+    <p class="kicker">Demo Mode</p>
+    <h2>Explore without a wallet.</h2>
+    <p>Wallet actions are not simulated. Your current game progress stays in this browser and no blockchain transaction is created.</p>
+    <button class="primary-action button-action" id="continueDemo" type="button">Continue in Demo Mode</button>
+  </dialog>
+
+  <dialog class="confirm-dialog" id="resetDialog">
+    <p class="kicker">Local data</p>
+    <h2>Reset expedition progress?</h2>
+    <p>This clears XP, dives, artifacts, missions and rank progress saved by this browser.</p>
+    <div><button id="cancelReset" type="button">Cancel</button><button id="confirmReset" type="button">Reset progress</button></div>
+  </dialog>
+
+  <footer>
+    <a class="brand route-link" href="#home"><img src="./assets/site-366efdef-1.webp" alt="" width="40" height="40"><span><strong>AQUANAUT</strong><small>THE LOST CITY</small></span></a>
+    <p>Dive deeper. Discover Atlantis. Become a legend.</p>
+    <nav><a href="#how-to-play">How to play</a><a href="#profile">Profile</a><a href="#naut">$NAUT</a></nav>
+  </footer>
+
+  <script src="./config.js" defer></script>
+  <script src="./env.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

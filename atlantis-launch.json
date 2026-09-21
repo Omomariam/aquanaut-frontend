@@ -1,0 +1,20 @@
+{
+  "name": "AQUANAUT",
+  "symbol": "NAUT",
+  "description": "$NAUT is the community memecoin for AQUANAUT: The Lost City, an underwater exploration game where players dive for artifacts, earn XP, complete missions, and climb the explorer ranks.",
+  "stockMint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+  "rewardMode": "holder_rewards",
+  "imagePath": "assets/aquanaut-logo.png",
+  "xUrl": "",
+  "websiteUrl": "",
+  "telegramUrl": "",
+  "dexFundingEnabled": false,
+  "dexProfile": {
+    "description": "",
+    "bannerPath": "",
+    "bannerUrl": "",
+    "websiteUrl": "",
+    "xUrl": "",
+    "telegramUrl": ""
+  }
+}
